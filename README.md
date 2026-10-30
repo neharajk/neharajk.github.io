@@ -1,18 +1,35 @@
-# Neha Raj | QA Engineer Portfolio
+# Neha Raj — Portfolio
 
-Personal portfolio website, hosted with GitHub Pages.
+A responsive, interactive personal portfolio built with plain HTML, CSS and JavaScript. No framework or build step required.
 
-Live site: https://neharajk.github.io
+## Run locally
 
-## About
+Open `index.html` in a browser, or run a local server:
 
-QA Engineer at Oracle (Fusion HCM, ERP, Procurement, Recruiting) working on AI-assisted Playwright and TypeScript test automation for Oracle Guided Learning.
+```bash
+python -m http.server 8000
+```
 
-## Contents
+Then visit http://localhost:8000.
 
-- `index.html`: the whole site (HTML and CSS in one file, no build step)
-- `.nojekyll`: tells GitHub Pages to serve the file as is
+## Publish with GitHub Pages
 
-## Edit locally
+1. Create a new public repository on GitHub (for example `neha-raj-portfolio`).
+2. Upload the contents of this folder to the repository root (not the enclosing folder).
+3. In the repository, open **Settings → Pages**.
+4. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/ (root)`, then Save.
+5. GitHub will publish the site at `https://YOUR-USERNAME.github.io/neha-raj-portfolio/`.
 
-Open `index.html` in a browser to preview. Change the text in the file, commit and push, and the site updates in a minute or two.
+## Before publishing
+
+- Review the public contact details in `index.html`.
+- Add your GitHub / LinkedIn URLs if you want them shown.
+- Check all certificate dates and document links. The Oracle Guided Learning Content Developer eCertificate supplied with this project states that it was valid until 05 October 2025; the page labels that date transparently.
+- The supplied resume PDF is included at `assets/Neha-Raj-Resume.pdf`.
+
+## Structure
+
+- `index.html` — page content and sections
+- `style.css` — visual system, responsive layout and animations
+- `script.js` — horizontal project rail and subtle reveal interactions
+- `assets/` — resume and original certificate PDFs
