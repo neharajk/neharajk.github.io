@@ -1,14 +1,5 @@
-const rail=document.querySelector('#projectRail');
-document.querySelector('#next').addEventListener('click',()=>rail.scrollBy({left:rail.clientWidth*.82,behavior:'smooth'}));
-document.querySelector('#prev').addEventListener('click',()=>rail.scrollBy({left:-rail.clientWidth*.82,behavior:'smooth'}));
-let down=false,startX=0,scrollLeft=0;
-rail.addEventListener('pointerdown',e=>{down=true;startX=e.clientX;scrollLeft=rail.scrollLeft;rail.setPointerCapture(e.pointerId)});
-rail.addEventListener('pointermove',e=>{if(!down)return;rail.scrollLeft=scrollLeft-(e.clientX-startX)});
-['pointerup','pointercancel','lostpointercapture'].forEach(evt=>rail.addEventListener(evt,()=>down=false));
-const cursor=document.querySelector('#cursorNote');
-if(matchMedia('(pointer:fine)').matches){rail.addEventListener('mouseenter',()=>cursor.classList.add('visible'));rail.addEventListener('mouseleave',()=>cursor.classList.remove('visible'));rail.addEventListener('mousemove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'})}
-// Subtle reveal as sections enter the viewport.
-const revealTargets=document.querySelectorAll('.project-card,.tool-group,.timeline-item,.credential-list a');
-if('IntersectionObserver'in window){const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in-view');io.unobserve(entry.target)}}),{threshold:.12});revealTargets.forEach(el=>{el.style.opacity='0';el.style.transform='translateY(14px)';el.style.transition='opacity .6s ease, transform .6s ease';io.observe(el)})}
-document.addEventListener('animationend',e=>{if(e.target.classList.contains('in-view')){e.target.style.opacity='1';e.target.style.transform='none'}});
-const style=document.createElement('style');style.textContent='.in-view{opacity:1!important;transform:none!important}';document.head.append(style);
+const toggle=document.querySelector('.menu-toggle');
+const nav=document.querySelector('.site-header nav');
+toggle?.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});
+nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle?.setAttribute('aria-expanded','false');}));
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver'in window){const nodes=document.querySelectorAll('.project-card,.timeline-entry,.skill');nodes.forEach(n=>n.classList.add('will-reveal'));const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('revealed');io.unobserve(e.target);}}),{threshold:.12});nodes.forEach(n=>io.observe(n));}
