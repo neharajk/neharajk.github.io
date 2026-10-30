@@ -2,7 +2,7 @@
 
 Personal portfolio website, hosted with GitHub Pages.
 
-Live site: https://YOUR-GITHUB-USERNAME.github.io
+Live site: https://neharajk.github.io
 
 ## About
 
