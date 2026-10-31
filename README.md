@@ -1,12 +1,14 @@
-# Neha Raj — QA Engineer Portfolio
+# Neha Raj — Portfolio
 
-A responsive, work-focused portfolio with a powder-blue editorial visual system.
+A minimal, editorial-style portfolio for Neha Raj, with a white canvas, navy typography and restrained powder-blue accents. The layout is responsive and avoids decorative hero artwork and oversized cards so the content and professional experience stay central.
 
 ## Publish on GitHub Pages
-1. Extract this ZIP.
-2. Upload the contents of `neha-raj-portfolio-v2` to the root of your `neharajk.github.io` repository.
-3. Preserve the `assets/` folder and its subfolders.
-4. Commit to `main` and wait for the Pages deployment workflow to finish.
-5. Hard-refresh the site with Ctrl + F5.
 
-The portfolio keeps professional experience at the centre, removes academic projects from the featured work area, and retains résumé and certificate PDFs in `assets/`.
+1. Download and extract this ZIP.
+2. Open the extracted `neha-raj-portfolio-v2` folder.
+3. Upload the **contents** of that folder (not the folder itself) to the root of `neharajk/neharajk.github.io`.
+4. Replace the existing `index.html`, `style.css`, and `script.js` when GitHub asks. Upload the `assets` folder as well so the résumé and certificate links continue to work.
+5. Commit the changes to the `main` branch.
+6. In **Actions**, wait for `pages build and deployment` to finish successfully, then refresh the live site with Ctrl+Shift+R.
+
+GitHub Pages is already configured to publish from `main` / root, so there is no need to change the Pages settings.
