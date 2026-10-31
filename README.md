@@ -1,11 +1,12 @@
-# Neha Raj — Portfolio
+# Neha Raj — QA Engineer Portfolio
 
-Responsive static portfolio for GitHub Pages.
+A responsive, work-focused portfolio with a powder-blue editorial visual system.
 
-## Update the live site
-1. Open the repository `neharajk.github.io`.
-2. Upload and replace `index.html`, `style.css`, and `script.js` at the repository root.
-3. Upload the complete `assets` folder too. Keep the folder structure unchanged, including `assets/Neha-Raj-Resume.pdf` and `assets/certificates/`.
-4. Commit to `main`, wait for GitHub Pages to deploy, then refresh `https://neharajk.github.io/` with Ctrl+F5.
+## Publish on GitHub Pages
+1. Extract this ZIP.
+2. Upload the contents of `neha-raj-portfolio-v2` to the root of your `neharajk.github.io` repository.
+3. Preserve the `assets/` folder and its subfolders.
+4. Commit to `main` and wait for the Pages deployment workflow to finish.
+5. Hard-refresh the site with Ctrl + F5.
 
-Extract this ZIP before uploading. Do not upload the ZIP file itself as the website.
+The portfolio keeps professional experience at the centre, removes academic projects from the featured work area, and retains résumé and certificate PDFs in `assets/`.
